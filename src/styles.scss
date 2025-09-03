@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #f20d0d;
+  --secondary-color: #1e1a1a;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --secondary-text-color: #a9a1a1;
+  --white: #ffffff;
+  --light-gray: #f2e8e8;
+  --dark-gray: #f2e8e8;
+  --input-background-color: #f1f0f0;
+}
+
+.dark-theme {
+  --primary-color: #980c13;
+  --secondary-color: #a9a1a1;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --secondary-text-color: #a9a1a1;
+  --white: #ffffff;
+  --light-gray: #625858;
+  --dark-gray: #3e3838;
+  --input-background-color: #3e3838;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+*:not(.material-icons) {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.mat-icon {
+  color: var(--text-color);
+}
+
+.main {
+  padding: 0 1rem;
+}
+
+h1,
+h2 {
+  font-size: 1.125rem !important;
+  font-weight: bold !important;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: var(--input-background-color);
+}
+
+.no-outline .mdc-notched-outline__leading,
+.no-outline .mdc-notched-outline__notch,
+.no-outline .mdc-notched-outline__trailing {
+  border-color: transparent !important;
+}
+
+.mdc-text-field {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--secondary-text-color) !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input,
+.mat-mdc-select {
+  color: var(--text-color) !important;
+}
+
+div.mat-mdc-select-panel {
+  background-color: var(--input-background-color) !important;
+  color: var(--text-color) !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(
+    .mat-mdc-option-multiple
+  ) {
+  background-color: var(--light-gray) !important;
+}
+
+button {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+// Botões
+.btn-secondary {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--white);
+
+  .mat-icon {
+    color: var(--white);
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:hover,
+  &:active {
+    background-color: var(--secondary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: none;
+
+    .mat-icon {
+      color: var(--white);
+    }
+  }
+}
+
+.btn-outline-secondary {
+  border-color: var(--secondary-text-color);
+  color: var(--text-color);
+
+  .mat-icon {
+    color: var(--text-color);
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:hover,
+  &:active {
+    background-color: var(--secondary-color) !important;
+    color: var(--background-color) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: none;
+
+    .mat-icon {
+      color: var(--background-color);
+    }
+  }
+}

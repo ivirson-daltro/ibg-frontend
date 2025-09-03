@@ -1,0 +1,70 @@
+<section id="profile">
+  <img
+    [src]="'assets/images/' + member?.profilePicture"
+    alt="{{ member?.name }}"
+  />
+  <h2>{{ member?.name }}</h2>
+  <p>Membro desde {{ member?.entryDate | date : "yyyy" }}</p>
+  <p>Batizada em {{ member?.baptismDate | date : "yyyy" }}</p>
+</section>
+
+<section id="personal-data" class="mt-3">
+  <h3 class="my-3">Dados Pessoais</h3>
+  <div class="member-data">
+    <p class="title">Nome Completo</p>
+    <p class="value">{{ member?.name }}</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Data de Nascimento</p>
+    <p class="value">{{ member?.birthDate | date : "dd/MM/yyyy" }}</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Gênero</p>
+    <p class="value">{{ member?.gender }}</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Estado Civil</p>
+    <p class="value">{{ member?.maritalStatus }}</p>
+  </div>
+</section>
+
+<section id="contact-info" class="mt-3">
+  <h3 class="my-3">Contato</h3>
+  <div class="member-data">
+    <p class="title">Telefone</p>
+    <p class="value">{{ member?.phone ?? "" | mask : "(00) 00000-0000" }}</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Email</p>
+    <p class="value">{{ member?.email }}</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Endereço</p>
+    <p class="value">
+      {{ member?.address?.street }}, {{ member?.address?.number }},
+      {{ member?.address?.complement ?? "" }} - {{ member?.address?.city }}-
+      {{ member?.address?.state }}
+    </p>
+  </div>
+</section>
+
+<section id="participation" class="mt-3">
+  <h3 class="my-3">Participação na Igreja</h3>
+  <div class="member-data">
+    <p class="title">Ministério</p>
+    <p class="value">Louvor</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Comissão</p>
+    <p class="value">Indicação</p>
+  </div>
+  <div class="member-data">
+    <p class="title">Atividades</p>
+    <p class="value">Ensino, Eventos</p>
+  </div>
+</section>
+
+<section id="summary" class="mt-3">
+  <h3 class="my-3">Observações</h3>
+  <p class="value">{{ member?.notes }}</p>
+</section>

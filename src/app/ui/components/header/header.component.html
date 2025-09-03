@@ -1,0 +1,21 @@
+<mat-toolbar class="header">
+  @if (backTo()) {
+  <button
+    class="back-arrow"
+    mat-icon-button
+    aria-label="Botão para voltar à tela anterior"
+    routerLink="{{ backTo() }}"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  }
+  <h1>{{ title() }}</h1>
+  <button
+    class="menu"
+    mat-icon-button
+    aria-label="Botão para abrir o menu"
+    (click)="openSidenav()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>

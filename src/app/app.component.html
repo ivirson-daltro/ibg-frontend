@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" position="start">
+    <div class="sidenav-header">
+      <span class="sidenav-title">Menu</span>
+      <button mat-icon-button (click)="sidenav.close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <mat-nav-list>
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/home"
+        (click)="sidenav.close()"
+        ><mat-icon>home</mat-icon> Home</a
+      >
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/members"
+        (click)="sidenav.close()"
+        ><mat-icon>group</mat-icon> Membros</a
+      >
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/ministries"
+        (click)="sidenav.close()"
+        ><mat-icon>groups</mat-icon> Ministérios</a
+      >
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/directorship"
+        (click)="sidenav.close()"
+        ><mat-icon>supervisor_account</mat-icon> Diretoria</a
+      >
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/settings"
+        (click)="sidenav.close()"
+        ><mat-icon>settings</mat-icon> Configurações</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header class="header" (openSidenavEmitter)="sidenav.toggle()" />
+
+    <main class="content">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
