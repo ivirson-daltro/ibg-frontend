@@ -41,6 +41,7 @@ export class HeaderComponent {
 
   title = computed(() => this.data()['title'] ?? '');
   backTo = computed(() => this.data()['backTo'] ?? undefined);
+  showMenu = computed(() => this.data()['showMenu'] ?? false);
 
   openSidenav() {
     this.openSidenavEmitter.emit();

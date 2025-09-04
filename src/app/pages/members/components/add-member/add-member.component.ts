@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { Genders, MaritalStatuses } from '../../../../models/member.model';
 import { NgxMaskDirective } from 'ngx-mask';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-member',
@@ -14,6 +15,7 @@ import { NgxMaskDirective } from 'ngx-mask';
     MatInputModule,
     MatSelectModule,
     NgxMaskDirective,
+    RouterLink,
   ],
   templateUrl: './add-member.component.html',
   styleUrl: './add-member.component.scss',

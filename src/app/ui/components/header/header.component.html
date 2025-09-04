@@ -9,7 +9,10 @@
     <mat-icon>arrow_back</mat-icon>
   </button>
   }
+
   <h1>{{ title() }}</h1>
+
+  @if (showMenu()) {
   <button
     class="menu"
     mat-icon-button
@@ -18,4 +21,5 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
+  }
 </mat-toolbar>
