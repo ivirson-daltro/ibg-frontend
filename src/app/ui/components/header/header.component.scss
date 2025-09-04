@@ -1,0 +1,31 @@
+.mat-toolbar {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 8px;
+  font-size: 28px;
+  color: #221a19;
+}
+
+.menu {
+  position: absolute;
+  right: 8px;
+  font-size: 28px;
+  color: #221a19;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}

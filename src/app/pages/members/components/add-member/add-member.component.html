@@ -1,0 +1,135 @@
+<form [formGroup]="form">
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Data de Nascimento</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="birthDate"
+        mask="00/00/0000"
+        [dropSpecialCharacters]="false"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Gênero</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="">- Selecione</mat-option>
+        <mat-option [value]="genders.Male">Masculino</mat-option>
+        <mat-option [value]="genders.Female">Feminino</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Estado Civil</mat-label>
+      <mat-select formControlName="maritalStatus">
+        <mat-option value="">- Selecione</mat-option>
+        <mat-option [value]="maritalStatuses.Single">Solteiro(a)</mat-option>
+        <mat-option [value]="maritalStatuses.Married">Casado(a)</mat-option>
+        <mat-option [value]="maritalStatuses.Divorced"
+          >Divorciado(a)</mat-option
+        >
+        <mat-option [value]="maritalStatuses.Widowed">Viúvo(a)</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </fieldset>
+
+  <fieldset>
+    <legend>Contato</legend>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Telefone</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="phone"
+        mask="(00) 00000-0000"
+      />
+    </mat-form-field>
+  </fieldset>
+
+  <fieldset>
+    <legend>Conversão</legend>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Data de Batismo</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="baptismDate"
+        mask="00/00/0000"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Data de Conversão</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="entryDate"
+        mask="00/00/0000"
+      />
+    </mat-form-field>
+  </fieldset>
+
+  <fieldset formGroupName="address">
+    <legend>Endereço</legend>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>CEP</mat-label>
+      <input matInput type="text" formControlName="zip" mask="00000-000" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Rua</mat-label>
+      <input matInput type="text" formControlName="street" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Número</mat-label>
+      <input matInput type="number" formControlName="number" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Complemento</mat-label>
+      <input matInput type="text" formControlName="complement" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Bairro</mat-label>
+      <input matInput type="text" formControlName="neighborhood" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Cidade</mat-label>
+      <input matInput type="text" formControlName="city" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Estado</mat-label>
+      <input matInput type="text" formControlName="state" />
+    </mat-form-field>
+  </fieldset>
+
+  <fieldset>
+    <legend>Observações</legend>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Observações</mat-label>
+      <textarea matInput formControlName="notes"></textarea>
+    </mat-form-field>
+  </fieldset>
+
+  <div class="row my-3">
+    <div class="col-6">
+      <button
+        type="button"
+        class="btn btn-lg btn-outline-secondary w-100"
+        routerLink="/members"
+      >
+        Cancelar
+      </button>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-lg btn-secondary w-100">
+        Salvar
+      </button>
+    </div>
+  </div>
+</form>

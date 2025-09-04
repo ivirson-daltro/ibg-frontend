@@ -1,0 +1,65 @@
+<section id="filter">
+  <mat-form-field appearance="outline" class="no-outline">
+    <mat-label>Pesquisar membros</mat-label>
+    <input matInput type="text" [(ngModel)]="searchTerm" />
+    @if (searchTerm) {
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Limpar campo"
+      (click)="searchTerm = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+
+  <div class="btn-filter-container">
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="setStatusFilter('all')"
+    >
+      Todos <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="setStatusFilter('active')"
+    >
+      Ativos <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="setStatusFilter('inactive')"
+    >
+      Inativos <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
+</section>
+
+<section id="members-list" class="my-4">
+  @for(member of filteredMembers; track member.id){
+  <div class="member-card" routerLink="/members/details/{{ member.id }}">
+    <img
+      [src]="'assets/images/' + member.profilePicture"
+      alt="{{ member.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.address.street }}, {{ member.address.number }}</p>
+    </div>
+  </div>
+  }
+</section>
+
+<div class="add-btn">
+  <button
+    type="button"
+    class="btn btn-lg btn-secondary"
+    routerLink="/members/add"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
