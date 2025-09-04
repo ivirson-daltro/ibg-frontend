@@ -1,81 +1,121 @@
 <section id="pastor" class="mb-4">
-    <h2 class="my-3">Pastor</h2>
-    <div class="member-card" routerLink="/leadership/details/{{ pastor?.member?.id }}">
-        <img [src]="'assets/images/' + pastor?.member?.profilePicture" alt="{{ pastor?.member?.name }}" />
-        <div class="member-data">
-            <h3>{{ pastor?.member?.name }}</h3>
-            <p>{{ pastor?.title }}</p>
-        </div>
+  <h2 class="my-3">Pastor</h2>
+  <div
+    class="member-card"
+    routerLink="/leadership/details/{{ pastor?.member?.id }}"
+  >
+    <img
+      [src]="'assets/images/' + pastor?.member?.profilePicture"
+      alt="{{ pastor?.member?.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ pastor?.member?.name }}</h3>
+      <p>{{ pastor?.title }}</p>
     </div>
+  </div>
 </section>
 
 <section id="vice-presidents" class="mb-4">
-    <h2 class="my-3">Vice-Presidência</h2>
-    @for(vicePresident of vicePresidents; track vicePresident.memberId){
-    <div class="member-card" routerLink="/leadership/details/{{ vicePresident.member.id }}">
-        <img [src]="'assets/images/' + vicePresident.member.profilePicture" alt="{{ vicePresident.member.name }}" />
-        <div class="member-data">
-            <h3>{{ vicePresident.member.name }}</h3>
-            <p>{{ vicePresident.title }}</p>
-        </div>
+  <h2 class="my-3">Vice-Presidência</h2>
+  @for(vicePresident of vicePresidents; track vicePresident.memberId){
+  <div
+    class="member-card"
+    routerLink="/leadership/details/{{ vicePresident.member.id }}"
+  >
+    <img
+      [src]="'assets/images/' + vicePresident.member.profilePicture"
+      alt="{{ vicePresident.member.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ vicePresident.member.name }}</h3>
+      <p>{{ vicePresident.title }}</p>
     </div>
-    }
+  </div>
+  }
 </section>
 
 <section id="secretary" class="mb-4">
-    <h2 class="my-3">Secretaria</h2>
-    @for(secretary of secretaries; track secretary.memberId){
-    <div class="member-card" routerLink="/leadership/details/{{ secretary.member.id }}">
-        <img [src]="'assets/images/' + secretary.member.profilePicture" alt="{{ secretary.member.name }}" />
-        <div class="member-data">
-            <h3>{{ secretary.member.name }}</h3>
-            <p>{{ secretary.title }}</p>
-        </div>
+  <h2 class="my-3">Secretaria</h2>
+  @for(secretary of secretaries; track secretary.memberId){
+  <div
+    class="member-card"
+    routerLink="/leadership/details/{{ secretary.member.id }}"
+  >
+    <img
+      [src]="'assets/images/' + secretary.member.profilePicture"
+      alt="{{ secretary.member.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ secretary.member.name }}</h3>
+      <p>{{ secretary.title }}</p>
     </div>
-    }
+  </div>
+  }
 </section>
 
 <section id="treasurers" class="mb-4">
-    <h2 class="my-3">Tesouraria</h2>
-    @for(treasurer of treasurers; track treasurer.memberId){
-    <div class="member-card" routerLink="/leadership/details/{{ treasurer.member.id }}">
-        <img [src]="'assets/images/' + treasurer.member.profilePicture" alt="{{ treasurer.member.name }}" />
-        <div class="member-data">
-            <h3>{{ treasurer.member.name }}</h3>
-            <p>{{ treasurer.title }}</p>
-        </div>
+  <h2 class="my-3">Tesouraria</h2>
+  @for(treasurer of treasurers; track treasurer.memberId){
+  <div
+    class="member-card"
+    routerLink="/leadership/details/{{ treasurer.member.id }}"
+  >
+    <img
+      [src]="'assets/images/' + treasurer.member.profilePicture"
+      alt="{{ treasurer.member.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ treasurer.member.name }}</h3>
+      <p>{{ treasurer.title }}</p>
     </div>
-    }
+  </div>
+  }
 </section>
 
 <section id="deacons" class="mb-4">
-    <h2 class="my-3">Diaconato</h2>
-    @for(deacon of deacons; track deacon.memberId){
-    <div class="member-card" routerLink="/leadership/details/{{ deacon.member.id }}">
-        <img [src]="'assets/images/' + deacon.member.profilePicture" alt="{{ deacon.member.name }}" />
-        <div class="member-data">
-            <h3>{{ deacon.member.name }}</h3>
-            <p>{{ deacon.title }}</p>
-        </div>
+  <h2 class="my-3">Diaconato</h2>
+  @for(deacon of deacons; track deacon.memberId){
+  <div
+    class="member-card"
+    routerLink="/leadership/details/{{ deacon.member.id }}"
+  >
+    <img
+      [src]="'assets/images/' + deacon.member.profilePicture"
+      alt="{{ deacon.member.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ deacon.member.name }}</h3>
+      <p>{{ deacon.title }}</p>
     </div>
-    }
+  </div>
+  }
 </section>
 
 <section id="leaders" class="mb-4">
-    <h2 class="my-3">Liderança</h2>
-    @for(leader of leaders; track leader.memberId){
-    <div class="member-card" routerLink="/leadership/details/{{ leader.member.id }}">
-        <img [src]="'assets/images/' + leader.member.profilePicture" alt="{{ leader.member.name }}" />
-        <div class="member-data">
-            <h3>{{ leader.member.name }}</h3>
-            <p>{{ leader.title }}</p>
-        </div>
+  <h2 class="my-3">Liderança</h2>
+  @for(leader of leaders; track leader.memberId){
+  <div
+    class="member-card"
+    routerLink="/leadership/details/{{ leader.member.id }}"
+  >
+    <img
+      [src]="'assets/images/' + leader.member.profilePicture"
+      alt="{{ leader.member.name }}"
+    />
+    <div class="member-data">
+      <h3>{{ leader.member.name }}</h3>
+      <p>{{ leader.title }}</p>
     </div>
-    }
+  </div>
+  }
 </section>
 
 <div class="add-btn">
-    <button type="button" class="btn btn-lg btn-secondary" routerLink="/leadership/set">
-        <mat-icon>settings</mat-icon>
-    </button>
+  <button
+    type="button"
+    class="btn btn-lg btn-primary"
+    routerLink="/leadership/set"
+  >
+    <mat-icon>settings</mat-icon>
+  </button>
 </div>

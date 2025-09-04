@@ -1,49 +1,51 @@
 <div class="register-container">
-    <form [formGroup]="form">
-        <mat-form-field appearance="outline" class="no-outline">
-            <mat-label>Nome</mat-label>
-            <input matInput type="text" formControlName="name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="no-outline">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" formControlName="email" />
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="no-outline">
-            <mat-label>Senha</mat-label>
-            <input matInput type="password" formControlName="password" />
-            <button matSuffix mat-icon-button aria-label="Mostrar senha">
-                <mat-icon>visibility</mat-icon>
-            </button>
-            @if (password?.touched && password?.invalid) {
-            @if (password?.errors?.['required']) {
-            <small class="danger">A senha é obrigatória.</small>
-            }
-            @if (password?.errors?.['minlength']) {
-            <small class="danger">Mínimo de 8 caracteres.</small>
-            }
-            }
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="no-outline">
-            <mat-label>Confirmar Senha</mat-label>
-            <input matInput type="password" formControlName="confirmPassword" />
-            <button matSuffix mat-icon-button aria-label="Mostrar senha">
-                <mat-icon>visibility</mat-icon>
-            </button>
-            @if (confirmPassword?.touched && form.hasError('passwordsMismatch')) {
-            <small class="danger">As senhas não coincidem.</small>
-            }
-        </mat-form-field>
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" formControlName="password" />
+      <button matSuffix mat-icon-button aria-label="Mostrar senha">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      @if (password?.touched && password?.invalid) { @if
+      (password?.errors?.['required']) {
+      <small class="danger">A senha é obrigatória.</small>
+      } @if (password?.errors?.['minlength']) {
+      <small class="danger">Mínimo de 8 caracteres.</small>
+      } }
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="no-outline">
+      <mat-label>Confirmar Senha</mat-label>
+      <input matInput type="password" formControlName="confirmPassword" />
+      <button matSuffix mat-icon-button aria-label="Mostrar senha">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      @if (confirmPassword?.touched && form.hasError('passwordsMismatch')) {
+      <small class="danger">As senhas não coincidem.</small>
+      }
+    </mat-form-field>
 
-        <div class="row my-3">
-            <div class="col-12">
-                <button type="button" class="btn btn-lg btn-secondary w-100" [disabled]="form.invalid">
-                    Cadastrar
-                </button>
-            </div>
-        </div>
-    </form>
-
-    <div class="d-flex justify-content-center">
-        <a routerLink="/auth/register">Já tem uma conta? Faça login</a>
+    <div class="row my-3">
+      <div class="col-12">
+        <button
+          type="button"
+          class="btn btn-lg btn-primary w-100"
+          [disabled]="form.invalid"
+        >
+          Cadastrar
+        </button>
+      </div>
     </div>
+  </form>
+
+  <div class="d-flex justify-content-center">
+    <a routerLink="/auth/login">Já tem uma conta? Faça login</a>
+  </div>
 </div>
