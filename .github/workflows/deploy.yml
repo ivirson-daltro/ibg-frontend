@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Build do Angular
-        run: npm run build -- --configuration production --base-href "/meu-repo/"
+        run: npm run build -- --configuration production --base-href "/ibg-frontend/"
 
       - name: Deploy para GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
