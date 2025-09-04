@@ -1,0 +1,13 @@
+<div class="chart">
+  @for(value of data(); let i = $index; track $index){
+  <div class="bar-container">
+    <small class="label">{{ value }}</small>
+    <div
+      class="bar"
+      [style.height.px]="(value / maxDataValue(data())) * maxHeight()"
+      [style.width.px]="40"
+    ></div>
+    <span class="label">{{ labels()[i] }}</span>
+  </div>
+  }
+</div>

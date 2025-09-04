@@ -1,0 +1,28 @@
+.chart {
+  display: grid;
+  grid-template-columns: repeat(var(--bar-count), 1fr);
+  align-items: end;
+  gap: 8px;
+  height: 150px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar {
+  background-color: var(--bar-background-color);
+  //   width: 40px;
+  border-top: 2px solid var(--bar-border-color);
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.label {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+}

@@ -1,1 +1,22 @@
-<p>home works!</p>
+<section id="overview" class="mb-4">
+  <h2 class="my-3">Visão Geral</h2>
+  <div class="cards">
+    <app-card-info title="Membros" value="250" />
+    <app-card-info title="Congregados" value="120" />
+    <app-card-info title="Ministérios" value="15" />
+    <app-card-info title="Comissões" value="8" />
+  </div>
+</section>
+
+<section id="members-ages" class="mb-4">
+  <h2 class="my-3">Membros</h2>
+  <div class="ages">
+    <h3>Membros por Faixa Etária</h3>
+    <app-chart
+      [labels]="['0-3', '4-11', '12-17', '18-39', '40-59', '60+']"
+      [data]="[50, 70, 40, 90, 35, 10]"
+      [maxHeight]="120"
+    >
+    </app-chart>
+  </div>
+</section>

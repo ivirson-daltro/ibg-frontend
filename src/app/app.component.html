@@ -8,16 +8,53 @@
     </div>
 
     <mat-nav-list>
-      <a class="menu-item" mat-list-item routerLink="/home" (click)="sidenav.close()"><mat-icon>home</mat-icon> Home</a>
-      <a class="menu-item" mat-list-item routerLink="/members" (click)="sidenav.close()"><mat-icon>group</mat-icon>
-        Membros</a>
-      <a class="menu-item" mat-list-item routerLink="/ministries" (click)="sidenav.close()"><mat-icon>groups</mat-icon>
-        Ministérios</a>
-      <a class="menu-item" mat-list-item routerLink="/leadership"
-        (click)="sidenav.close()"><mat-icon>supervisor_account</mat-icon>
-        Liderança</a>
-      <a class="menu-item" mat-list-item routerLink="/settings" (click)="sidenav.close()"><mat-icon>settings</mat-icon>
-        Configurações</a>
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/home"
+        (click)="sidenav.close()"
+        ><mat-icon>home</mat-icon> Home</a
+      >
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/members"
+        (click)="sidenav.close()"
+        ><mat-icon>group</mat-icon>
+        Membros
+      </a>
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/ministries"
+        (click)="sidenav.close()"
+        ><mat-icon>groups</mat-icon>
+        Ministérios
+      </a>
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/leadership"
+        (click)="sidenav.close()"
+        ><mat-icon>supervisor_account</mat-icon>
+        Liderança
+      </a>
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/settings"
+        (click)="sidenav.close()"
+        ><mat-icon>settings</mat-icon>
+        Configurações
+      </a>
+      <a
+        class="menu-item"
+        mat-list-item
+        routerLink="/auth/login"
+        (click)="sidenav.close()"
+        ><mat-icon>logout</mat-icon>
+        Sair
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
